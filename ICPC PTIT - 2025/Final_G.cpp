@@ -65,7 +65,7 @@ void process(void) {
     int ans = 1;
     for(int i = 0; i < v.size(); i++) { 
         k--;
-        ans = (ans + 1LL * max(0, v[i] - 1 - get(1, 1, n, 1, v[i] - 1)) * A(n - (i + 1), k)) % MOD;
+        ans = (ans + 1LL * (v[i] - 1 - get(1, 1, n, 1, v[i] - 1)) * A(n - (i + 1), k)) % MOD;
         update(1, 1, n, v[i]);
     }
     cout << ans;
